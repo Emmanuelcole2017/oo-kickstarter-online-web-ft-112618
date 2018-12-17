@@ -10,7 +10,8 @@ class Project
     instance = self
     if !backer.backed_projects.include?(instance)
       backer.add_project(instance)
-      
+    end
+
     @backers << backer
   end
 end
