@@ -8,7 +8,9 @@ class Project
 
   def add_backer(backer)
     instance = self
-    puts backer.backed_projects.length
+    if backer.backed_projects.length == 0
+      backer.back_project(instance)
+    end
     @backers << backer
   end
 end
